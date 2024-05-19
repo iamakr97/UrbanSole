@@ -1,0 +1,87 @@
+.myaccoutn-container{
+    max-width: 1100px;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.image-container{
+   width: 30%;
+}
+.image-container img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 4px solid var(--blue-color);
+}
+.editbtn {
+    display: block;
+    margin: 1rem 10%;
+    width: 5rem;
+    height: 2.5rem;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    background-color: var(--blue-color);
+}
+.profileName {
+    height: 3rem;
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 550;
+    text-align: center;
+    color: black;
+    background-color: transparent;
+    width: 100%;
+    border: 2px solid var(--blue-color);
+    border-radius: 8px;
+    border: none;
+}
+.emailId {
+    margin: 0.5rem auto;
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    height: 2.5rem;
+    font-weight: 500;
+    background-color: transparent;
+    border-radius: 8px;
+    border: none;
+}
+input:focus {
+    outline: none;
+}
+.btn2{
+    width: 8rem;
+}
+.btncontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart {
+    display: block;
+    margin: 0.5rem auto;
+    width: 100%;
+    height: 3rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.logoutbtncontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoutbtn{
+    height: 3rem;
+    border-radius: 8px;
+    width: 5rem;
+    font-size: 1.2rem;
+    border: 1px solid var(--blue-color);
+    background-color: transparent;
+    cursor: pointer;
+}
+

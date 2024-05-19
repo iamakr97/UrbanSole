@@ -1,0 +1,99 @@
+.filter-container {
+    background-color: rgba(241, 241, 241, 0.9);
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+    margin-top: 1.9rem;
+}
+
+.filter-container h3 {
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.price-range input {
+    width: 4rem;
+    margin: 0.2rem;
+    border: 1px solid black;
+    padding: 0.2rem;
+    font-size: 1.1rem;
+    border-radius: 2px;
+
+}
+
+.range-slider {
+    margin: 1rem auto;
+    width: 100%;
+}
+
+.price-range label {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.filter-category {
+    margin: 1rem 0;
+}
+
+.filter-category label {
+    font-size: 1.1rem;
+    margin-right: 1rem;
+    font-weight: 450;
+}
+
+#category {
+    width: 90%;
+    height: 2rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 0.1rem;
+}
+
+.filter-gender {
+    display: flex;
+}
+
+.filter-gender div input[type="radio"] {
+    display: none;
+}
+
+.filter-gender div {
+    margin: 1rem 0.5rem;
+}
+
+.filter-gender div label {
+    border: 1px solid var(--blue-color);
+    border-radius: 5px;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.filter-gender div input[type="radio"]:checked+label {
+    background-color: var(--blue-color);
+    color: white;
+}
+
+.filter-btn-container {
+    margin: 1rem 0;
+}
+
+.filter-btn-container button {
+    display: block;
+}
+
+.clear-filterbtn {
+    background-color: white;
+    color: var(--blue-color);
+    border: 1px solid var(--blue-color);
+    margin: 1rem auto;
+}

@@ -1,0 +1,37 @@
+.featured-container{
+    max-width: 1100px;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#featuredProductHeading{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--blue-color);
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#browse-product-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    background-color: white;
+    color: var(--blue-color);
+    border: 2px solid var(--blue-color);
+    cursor: pointer;
+}
+#browse-product-btn :hover {
+    background-color: var(--blue-color);
+    
+}

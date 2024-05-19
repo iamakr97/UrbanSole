@@ -1,0 +1,114 @@
+.cart-container {
+    min-height: calc(100vh - 4.5rem);
+    max-width: 1100px;
+    margin: 1rem auto;
+    position: relative;
+}
+
+.cart-items {
+    display: flex;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+.cart-items p {
+    line-height: 1.5rem;
+}
+
+.cart-image img {
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.remove-btn {
+    color: white;
+    background-color: var(--blue-color);
+    border: none;
+    cursor: pointer;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+}
+
+.cart-quantity {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.quantity-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity-cont p {
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid rgb(103, 103, 103);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity-cont button {
+    height: 2rem;
+    width: 2rem;
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+.inc-dec-btn {
+    display: block;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.cart-page {
+    display: flex;
+    justify-content: left;
+}
+
+.check-out {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+.check-out-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.checkout-btn {
+    padding: 0.8rem 3rem;
+    background-color: var(--blue-color);
+    border-radius: 5px;
+    border: 1px solid var(--blue-color);
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 550;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.check-out-container h3 {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.checkout-btn:hover{
+    background-color: white;
+    color: var(--blue-color);
+    border: 1px solid var(--blue-color);
+}
+ 

@@ -1,0 +1,32 @@
+#order-id{
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding-bottom: 0.5rem;
+}
+#order-id span {
+    color: rgb(101, 101, 101);
+}
+
+.order-card-container {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: rgb(235, 235, 235);
+    border-radius: 8px;
+}
+
+.order-pro-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.order-card-image img {
+    height: 100px;
+    width: 100px;
+    border-radius: 8px;
+}
+
+.order-card-desc :first-child {
+    font-weight: 500;
+    font-weight: 1.1rem;
+}

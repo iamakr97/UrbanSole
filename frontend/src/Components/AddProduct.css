@@ -1,0 +1,64 @@
+.addProductHeading{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.8rem;
+}
+
+.form-container{
+    max-width: 600px;
+    margin: 1rem auto;
+    /* border: 2px solid black; */
+}
+.form-container div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.form-container div input {
+    display: block;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    padding-left: 0.7rem;
+    height: 2rem;
+    max-width: 400px;
+}
+.form-container div label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0.5rem 0.5rem;
+}
+.form-container div select {
+    position: relative;
+    width: 400px;
+    height: 2rem;
+    font-size: 1.2rem;
+}
+.form-container div textarea {
+    font-size: 1.2rem;
+    font-weight: 450;
+    width: 400px;
+}
+textarea:focus {
+    outline: none;
+}
+.submitbtncontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addProductbtn {
+    width: 400px;
+    height: 2.5rem;
+    background-color: rgb(66, 164, 66);
+    border: none;
+    border-radius: 8px;
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: white;
+    
+}
