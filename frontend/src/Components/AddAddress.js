@@ -30,7 +30,7 @@ function AddAddress() {
     }
     function addressSubmitHandler(e) {
 
-        if (address.street == '' || address.city == '' || address.state == '' || address.zipCode == '' || address.phone == '') {
+        if (address.street === '' || address.city === '' || address.state === '' || address.zipCode === '' || address.phone === '') {
             toast.error("Please Enter All details");
             return;
         }
@@ -43,7 +43,6 @@ function AddAddress() {
                 },
                 withCredentials: true
             }).then(res => {
-                // console.log(res);
                 setAddress({
                     street: '',
                     city: '',

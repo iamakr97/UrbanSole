@@ -35,7 +35,9 @@ function Footer() {
                 <p><FaRegCopyright />2024 Urban Sole.All rights reserved.</p>
                 <p>
                     <span>Developed by : Amit Ranjan | </span>
-                    <Link>Contact Us</Link>
+                    <Link to='https://portfolio-smoky-beta-13.vercel.app' target='_blank'>About Us</Link>
+                    <span> | </span>
+                    <Link to='https://www.linkedin.com/in/iamakr97' target='_blank'>Contact Us</Link>
                 </p>
             </div>
         </div>

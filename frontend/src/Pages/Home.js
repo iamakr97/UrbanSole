@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios';
-import Loader from '../Components/Loader';
-import ProductCard from '../Components/ProductCard';
+import React, { useEffect } from 'react'
 import './Home.css';
 import heroImage from '../Assets/hero-image.png';
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -13,7 +10,7 @@ import { clearFilter } from '../redux/filterSlice';
 import Cookies from 'js-cookie';
 
 function Home() {
-  useEffect(()=>{
+  useEffect(() => {
     console.log(Cookies.get("token"));
   }, [])
   const navigate = useNavigate();
