@@ -59,3 +59,36 @@
     width: 100%;
     display: block;
 }
+
+@media (max-width: 1100px) {
+    .signupFormContainer {
+        max-width: 90%; 
+    }
+    .form-container {
+        max-width: 350px;
+    }
+    .signup-image{
+        width: 50%;
+    }
+    .signup-image img {
+        height: 90%;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .signup-image img {
+        display: none;
+    }
+    .form-container{
+        max-width: 95%;
+    }
+    .form-container input {
+
+        width: 100%;
+    }
+    
+    .signup-btn {
+        width: 100%;   
+    }  
+}

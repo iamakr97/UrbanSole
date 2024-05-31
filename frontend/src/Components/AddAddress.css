@@ -3,9 +3,11 @@
     min-height: calc(100vh - 4rem);
     margin: 1rem auto;
 }
+
 .add-address-container h3 {
     text-align: center;
 }
+
 .add-address-container form {
     display: flex;
     flex-direction: column;
@@ -13,6 +15,7 @@
     align-items: center;
 
 }
+
 .add-address-container form input {
     height: 2rem;
     width: 450px;
@@ -23,6 +26,7 @@
     padding-left: 0.8rem;
     margin: 0.5rem 0;
 }
+
 .add-address-container form button {
     padding: 0.3rem;
     font-size: 1.1rem;
@@ -35,7 +39,18 @@
     cursor: pointer;
     transition: all 0.3s linear;
 }
-.add-address-container form button:hover{
+
+.add-address-container form button:hover {
     background-color: white;
     color: var(--blue-color);
+}
+
+@media (max-width: 768px) {
+    .add-address-container form input {
+        width: 90%;
+    }
+
+    .add-address-container form button {
+        width: 90%;
+    }
 }

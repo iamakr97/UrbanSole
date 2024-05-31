@@ -111,4 +111,17 @@
     color: var(--blue-color);
     border: 1px solid var(--blue-color);
 }
- 
+
+@media (max-width: 768px) {
+
+
+    .checkout-btn {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    .check-out-container h3 {
+        font-size: 1.1rem;
+    }
+    
+}

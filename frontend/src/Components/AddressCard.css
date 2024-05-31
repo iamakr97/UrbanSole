@@ -36,3 +36,12 @@
     background-color: white;
     color: var(--blue-color);
 }
+
+@media (max-width: 768px) {
+    .address-card {
+        padding: 0.5rem;
+        background-color: rgb(245, 245, 245);
+        width: 350px;
+        margin: 0 auto;
+    } 
+}

@@ -16,7 +16,6 @@ function Categories() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-
     function categoryHandler(item) {
         const myFilter = {
             priceMin: 0,

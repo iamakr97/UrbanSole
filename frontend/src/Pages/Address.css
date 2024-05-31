@@ -48,7 +48,6 @@
 .select-add-card label {
     display: block;
     border-radius: 8px;
-    border: 2px solid transparent;
     cursor: pointer;
 }
 .select-add-card input[type="radio"] {

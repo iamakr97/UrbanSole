@@ -1,20 +1,29 @@
-.cart-not-login{
+.cart-not-login {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: calc(100vh - 5.6rem);
 }
+
 .cart-not-login p {
     font-size: 2rem;
     font-weight: 600;
 }
-#small-text{
+
+#small-text {
     font-size: 0.8rem;
 }
+
 .cart-not-login button {
     margin-top: 1.5rem;
     text-decoration: none;
     text-align: center;
     padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .cart-not-login button {
+        width: 90%;
+    }
 }
