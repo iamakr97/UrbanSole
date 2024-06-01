@@ -157,7 +157,6 @@ exports.login = async (req, res) => {
                 sameSite: 'None',
                 secure: true
             }
-            // console.log(token);
             res.cookie("token", token, options).status(200).json(
                 {
                     success: true,
@@ -175,7 +174,7 @@ exports.login = async (req, res) => {
             );
         }
     } catch (error) {
-        console.log("Error in Login: ", error);
+        // console.log("Error in Login: ", error);
         return res.status(500).json(
             {
                 success: false,

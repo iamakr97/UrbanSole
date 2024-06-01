@@ -103,13 +103,10 @@ exports.removeFromCart = async (req, res) => {
                 message: "Item not found in cart"
             });
         }
-        // console.log(itemIndex);
         const removedItem = myCart.cartItem[itemIndex];
         myCart.cartItem.splice(itemIndex, 1);
         myCart.totalPrice -= removedItem.price * removedItem.quantity;
-
-        console.log(removedItem);
-        
+   
         await myCart.save();
 
         return res.status(200).json({

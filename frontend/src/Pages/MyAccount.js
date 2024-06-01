@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -8,8 +8,10 @@ import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { logout } from '../redux/authSlice';
 import { clearCart } from '../redux/cartSlice';
+import { FaRegEdit } from "react-icons/fa";
 
 function MyAccount() {
+  const profilePicRef = useRef();
   const { isLoggedIn, token, role } = useSelector(state => state.auth);
   const [myAccount, setMyAccount] = useState();
   const dispatch = useDispatch();
@@ -41,14 +43,14 @@ function MyAccount() {
 
   }, []);
   const [picEdit, setPicEdit] = useState(false);
-  const [profilePic, setProfilePic] = useState();
-  function updateProfilePicHandler() {
-    if (!profilePic) {
+  // const [profilePic, setProfilePic] = useState();
+  function updateProfilePicHandler(e) {
+    if (!e.target.files[0]) {
       toast.error('Choose New Image');
       return;
     }
     const formData = new FormData();
-    formData.append('file', profilePic);
+    formData.append('file', e.target.files[0]);
     const load = toast.loading("Please Wait");
     axios.post(`${process.env.REACT_APP_SERVER_URL}/editProfilePic`, formData, {
       headers: {
@@ -65,6 +67,7 @@ function MyAccount() {
     }).finally(() => toast.dismiss(load))
 
   }
+
   const [editProfile, setEditProfile] = useState(false);
   const [disable, setDisable] = useState(true);
   const [name, setName] = useState();
@@ -73,6 +76,7 @@ function MyAccount() {
     setDisable(false);
     setEditProfile(true);
   }
+  
   function saveHandler() {
     if (name === '' || email === '') {
       toast.error("Please fill the Details...");
@@ -119,6 +123,9 @@ function MyAccount() {
         toast.error("Something went wrong");
       }).finally(() => toast.dismiss(load));
   }
+  function triggerFileInput() {
+    profilePicRef.current.click();
+  }
   return (
     <div className='myAccount'>
       {(!myAccount || myAccount === undefined)
@@ -128,16 +135,8 @@ function MyAccount() {
         <div className='myaccoutn-container'>
           <div className='image-container'>
             <img src={myAccount.profileImage} alt="ProfileImage" height={150} />
-            {!picEdit
-              ?
-              <button onClick={() => setPicEdit(true)} className='editbtn'>Edit</button>
-              :
-              <div>
-                <input type="file" name="file" id="file" onChange={(e) => setProfilePic(e.target.files[0])} />
-                <button type="button" onClick={updateProfilePicHandler} className='editbtn'>Save</button>
-                <button type='button' onClick={() => setPicEdit(false)} className='editbtn'>Cancle</button>
-              </div>
-            }
+            <FaRegEdit onClick={triggerFileInput} id='profilePicEditIcon' />
+            <input type="file" name="file" id="file" onChange={(e) => updateProfilePicHandler(e)} ref={profilePicRef} style={{ display: 'none' }}/>
           </div>
           <div className='content-container'>
             <div>

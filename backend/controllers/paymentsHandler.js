@@ -13,9 +13,7 @@ exports.checkout = async (req, res) => {
             currency: "INR",
         };
         const order = await instance.orders.create(options);
-        console.log("Products", products);
-        console.log('Address', address);
-        console.log("id: ", id);
+
         const newOrder = new orders({
             products: products.map((product) => ({
                 product: product.productId,
