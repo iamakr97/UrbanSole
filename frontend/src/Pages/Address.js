@@ -39,6 +39,7 @@ function Address() {
             }
         ).then((res) => {
             myOrder = res.data.order;
+            // console.log(res);
         }).catch((error) => {
             toast.error("Internal Server Error");
             console.log(error);
@@ -46,6 +47,10 @@ function Address() {
             toast.dismiss(load);
         })
         console.log(myOrder);
+        if (!window.Razorpay) {
+            toast.error("Razorpay SDK not loaded");
+            return;
+        }
         const options = {
             key: process.env.REACT_APP_RAZORPAY_KEY_ID,
             amount: myOrder.amount,
@@ -68,6 +73,7 @@ function Address() {
             }
 
         };
+
         const razor = new window.Razorpay(options);
         razor.open();
         dispatch(clearCart());

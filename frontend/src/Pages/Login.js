@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { login } from '../redux/authSlice';
 import LoginImage from '../Assets/LoginImage.png';
 import ButtonLoader from '../Components/ButtonLoader';
@@ -30,7 +30,7 @@ function Login() {
             }
         });
     }
-    function loginHandler(e) {
+    async function loginHandler(e) {
         e.preventDefault();
         if(buttonLoading) {
             return;
@@ -41,7 +41,7 @@ function Login() {
         }
         setButtonLoading(true);
         const load = toast.loading("Please Wait...");
-        axios.post(`${process.env.REACT_APP_SERVER_URL}/login`,
+        await axios.post(`${process.env.REACT_APP_SERVER_URL}/login`,
             {
                 email: loginData.email,
                 password: loginData.password
@@ -56,7 +56,6 @@ function Login() {
                 if (response.status === 200) {
                     dispatch(login(response.data));
                     window.localStorage.setItem("token",response.data.token);
-                    // console.log(window.localStorage.getItem("token"));
                     toast.success("LoggedIn Successfully");
                     setLogindata(
                         {
@@ -88,7 +87,6 @@ function Login() {
     }
     return (
         <div className='signupFormContainer'>
-
             <form onSubmit={loginHandler} className='form-container'>
                 <h2 className='form-heading'>Enter Details for Login</h2>
                 <input
@@ -98,7 +96,6 @@ function Login() {
                     placeholder='Enter Your Email'
                     value={loginData.email}
                     onChange={changeHandler}
-                    autoComplete='off'
                 />
                 <input
                     type="password"
@@ -107,9 +104,8 @@ function Login() {
                     placeholder='Enter Password'
                     value={loginData.password}
                     onChange={changeHandler}
-                    autoComplete='off'
                 />
-                <button type="submit" className='signup-btn'>
+                <button type="submit" className={buttonLoading ? 'signup-btn btn-clicked' : 'signup-btn'} disabled={buttonLoading}>
                     {buttonLoading
                         ?
                         <ButtonLoader />
@@ -117,7 +113,7 @@ function Login() {
                         <span>Login</span>
                     }
                 </button>
-                <Link to='/signup' className='btn2 signup-btn'>Signup</Link>
+                <button onClick={()=>navigate('/signup')} className={buttonLoading ? 'btn2 signup-btn btn-clicked' : 'btn2 signup-btn'} disabled={buttonLoading}>Signup</button>
             </form>
             <div className='signup-image'>
                 <img src={LoginImage} alt="Login Here" />

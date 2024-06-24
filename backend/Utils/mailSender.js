@@ -3,7 +3,6 @@ require('dotenv').config();
 
 exports.mailSender = async (email, otp, body) => {
     try {
-
         let transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {

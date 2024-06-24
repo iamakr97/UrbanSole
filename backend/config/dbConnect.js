@@ -7,7 +7,7 @@ const dbConnect = () => {
             console.log("Database connected successfully");
         })
         .catch((error) => {
-            console.log("Error in DB connection");
+            console.log("Error in DB connection:-");
             console.log(error.message);
             process.exit(1);
         })

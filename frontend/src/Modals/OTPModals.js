@@ -13,7 +13,7 @@ function OTPModals({ otpModal, setOtpModal, signupData }) {
   const [otp, setOtp] = useState('');
   if (otpModal === false) return null;
 
-  function otpSubmitHandler(e) {
+  async function otpSubmitHandler(e) {
     e.preventDefault();
     if(buttonLoading) {
       return;
@@ -30,7 +30,7 @@ function OTPModals({ otpModal, setOtpModal, signupData }) {
     }
     setButtonLoading(true);
     const load = toast.loading("Please wait,Verifying OTP")
-    axios.post(`${process.env.REACT_APP_SERVER_URL}/signup`, userData,
+    await axios.post(`${process.env.REACT_APP_SERVER_URL}/signup`, userData,
       {
         withCredentials: true
       }).then((res) => {
@@ -63,14 +63,14 @@ function OTPModals({ otpModal, setOtpModal, signupData }) {
           <h3>Email Verification</h3>
           <p>A six digit OTP sent to your Email, Please Enter below to verify your Email</p>
         </div>
-        <form onSubmit={otpSubmitHandler}>
+        <form onSubmit={otpSubmitHandler} autoComplete='off'>
           <input
             type="text"
             onChange={(e) => setOtp(e.target.value)}
             value={otp}
             className='otp-input-box'
           />
-          <button type="submit" className='otp-submit-btn'>
+          <button type="submit" className={buttonLoading ? 'otp-submit-btn btn-clicked' : 'otp-submit-btn'} disabled={buttonLoading}>
             {buttonLoading
               ?
               <ButtonLoader />
