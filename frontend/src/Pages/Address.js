@@ -71,8 +71,8 @@ function Address() {
             theme: {
                 "color": "#4e00ff"
             }
-
         };
+        
 
         const razor = new window.Razorpay(options);
         razor.open();
