@@ -3,6 +3,13 @@
 # Urban Sole - Online Shoe Store
 
 Urban Sole is a modern and dynamic online shoe store developed using the MERN stack. This application allows users to browse, search, and purchase shoes seamlessly, with features for user authentication, product management, and a shopping cart. The app is deployed with the backend on Render and the frontend on Vercel.
+![urbanSole](https://github.com/user-attachments/assets/39a74ae9-896e-42ba-9839-fc6c01a1a093)
+![Screenshot 2024-08-17 130757](https://github.com/user-attachments/assets/4a2e21e0-4961-4fcd-91c4-6a798227feb9)
+![Screenshot 2024-05-26 171411](https://github.com/user-attachments/assets/69be7b1f-5bee-4ac8-a993-76edf136965d)
+![Screenshot 2024-05-22 145758](https://github.com/user-attachments/assets/28afd0cb-4a82-4fa0-8c33-e7e16603a84e)
+![Screenshot 2024-05-22 145748](https://github.com/user-attachments/assets/ae38e452-9675-447d-8f23-5d3006ecd199)
+
+
 
 ## Features
 
