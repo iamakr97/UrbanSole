@@ -37,7 +37,7 @@ function Product() {
     }
     useEffect(() => {
         fetchProductDetails();
-    }, []);
+    }, [id]);
     function handleNextImg() {
         setImgIndex((imgIndex) => (imgIndex + 1) % product.image.length);
     }

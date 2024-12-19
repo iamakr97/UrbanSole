@@ -3,7 +3,7 @@ const cloudinary = require('cloudinary').v2;
 exports.isFileTypeSupported = (type, supportedTypes) => {
     return supportedTypes.includes(type);
 }
-
+ 
 exports.uploadFileToCloudinary = async (file, folder, quality) => {
     try {
         const options = {};

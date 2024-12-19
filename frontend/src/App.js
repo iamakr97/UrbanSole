@@ -29,7 +29,7 @@ function App() {
     if (token) {
       const decodedToken = jwtDecode(token);
       const currentTime = Date.now() / 1000;
-      
+
       if (decodedToken.exp < currentTime) {
         localStorage.removeItem('token');
       } else {
@@ -60,7 +60,7 @@ function App() {
         <Route path='/user/address' element={<Address />} />
         <Route path='/user/addAddress' element={<AddAddress />} />
         <Route path='/user/payment' element={<PaymentPage />} />
-        <Route path='/admin/dashboard' element={<AdminDashboard/>} />
+        <Route path='/admin/dashboard' element={<AdminDashboard />} />
       </Routes>
       <Footer />
     </>

@@ -16,6 +16,7 @@ const { addProduct, allProducts, featuredProducts, fetchProductDetails, getAllPr
 const { allCartItems, addToCart, removeFromCart } = require('../controllers/cartHandlers');
 const { checkout, paymentVerification } = require('../controllers/paymentsHandler');
 const { myOrders, allOrders, updateOrder } = require('../controllers/ordersHandler');
+const { searchProduct } = require('../controllers/search');
 
 router.post('/sendotp', sendOTP);
 router.post('/signup', signup);
@@ -47,5 +48,9 @@ router.post('/paymentVerification', auth, paymentVerification);
 router.get('/myOrders', auth, isUser, myOrders);
 router.get('/allOrders', auth, isAdmin, allOrders);
 router.post('/updateOrder/:orderId', auth, isAdmin, updateOrder);
+
+
+//search 
+router.get('/search', searchProduct);
 
 module.exports = router;
