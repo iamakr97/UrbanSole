@@ -9,7 +9,7 @@ Urban Sole is a modern and dynamic online shoe store developed using the MERN st
 ![Screenshot 2024-05-22 145758](https://github.com/user-attachments/assets/28afd0cb-4a82-4fa0-8c33-e7e16603a84e)
 ![Screenshot 2024-05-22 145748](https://github.com/user-attachments/assets/ae38e452-9675-447d-8f23-5d3006ecd199)
 
-
+  
 
 ## Features
 
